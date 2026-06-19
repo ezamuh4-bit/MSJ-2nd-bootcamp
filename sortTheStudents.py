@@ -1,0 +1,7 @@
+class Solution:
+    def sortTheStudents(self, score: List[List[int]], k: int) -> List[List[int]]:
+        for i in range (len(score)):
+            for j in range (0,len(score)-1-i):
+                if score[j][k]<score[j+1][k]:
+                    score[j],score[j+1]=score[j+1],score[j]
+        return score
